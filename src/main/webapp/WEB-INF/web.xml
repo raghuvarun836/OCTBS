@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>OnlineCTBS</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.admin.servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/admin/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.user.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/users/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>UserLogoutServlet</display-name>
+    <servlet-name>UserLogoutServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.user.servlet.UserLogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogoutServlet</servlet-name>
+    <url-pattern>/logout/UserLogoutServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>RegistrationServlet</display-name>
+    <servlet-name>RegistrationServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.user.servlet.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationServlet</servlet-name>
+    <url-pattern>/users/RegistrationServlet</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/admin/Error.jsp</location>
+  </error-page>
+  <servlet>
+    <description></description>
+    <display-name>TheatreServlet</display-name>
+    <servlet-name>TheatreServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.theatre.servlet.TheatreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TheatreServlet</servlet-name>
+    <url-pattern>/theatre/TheatreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterTheatre</display-name>
+    <servlet-name>RegisterTheatre</servlet-name>
+    <servlet-class>com.wipro.ctb.theatre.dao.RegisterTheatre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterTheatre</servlet-name>
+    <url-pattern>/RegisterTheatre</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>TheatreDeleteServlet</display-name>
+    <servlet-name>TheatreDeleteServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.theatre.delete.servlet.TheatreDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TheatreDeleteServlet</servlet-name>
+    <url-pattern>/theatre/TheatreDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>MovieServlet</display-name>
+    <servlet-name>MovieServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.movie.servlet.MovieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MovieServlet</servlet-name>
+    <url-pattern>/movie/MovieServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ListServlet</display-name>
+    <servlet-name>ListServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.movie.servlet.ListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListServlet</servlet-name>
+    <url-pattern>/list/ListServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>MovieDeleteServlet</display-name>
+    <servlet-name>MovieDeleteServlet</servlet-name>
+    <servlet-class>com.wipro.ctb.movie.delete.servlet.MovieDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TheatreDeleteServlet</servlet-name>
+    <url-pattern>/movie/MovieDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
